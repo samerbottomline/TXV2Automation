@@ -1,0 +1,18 @@
+2021/07/08-17:48:15.641 1c18 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_www.oakley.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/07/08-17:48:15.643 1c18 Recovering log #6
+2021/07/08-17:48:15.643 1c18 Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_www.oakley.com_0.indexeddb.leveldb/000006.log 
+2021/07/08-17:48:15.645 1c18 Delete type=2 #5
+2021/07/08-17:48:26.883 1c18 Level-0 table #11: started
+2021/07/08-17:48:26.896 1c18 Level-0 table #11: 42905 bytes OK
+2021/07/08-17:48:26.899 1c18 Delete type=0 #6
+2021/07/08-17:48:26.900 1c18 Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)
+2021/07/08-17:48:38.036 1c18 Level-0 table #13: started
+2021/07/08-17:48:38.054 1c18 Level-0 table #13: 71256 bytes OK
+2021/07/08-17:48:38.057 1c18 Delete type=0 #10
+2021/07/08-17:48:38.058 1c18 Manual compaction at level-0 from '\x00\x07\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at '\x00\x07\x00\x00\x05' @ 2941 : 1
+2021/07/08-17:48:38.058 1c18 Compacting 1@0 + 1@1 files
+2021/07/08-17:48:38.071 1c18 Generated table #14@0: 578 keys, 31346 bytes
+2021/07/08-17:48:38.071 1c18 Compacted 1@0 + 1@1 files => 31346 bytes
+2021/07/08-17:48:38.074 1c18 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/07/08-17:48:38.076 1c18 Delete type=2 #13
+2021/07/08-17:48:38.077 1c18 Manual compaction at level-0 from '\x00\x07\x00\x00\x05' @ 2941 : 1 .. '\x00\x08\x00\x00\x00' @ 0 : 0; will stop at (end)

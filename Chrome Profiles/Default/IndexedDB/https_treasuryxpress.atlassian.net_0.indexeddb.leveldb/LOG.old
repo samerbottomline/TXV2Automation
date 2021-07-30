@@ -1,0 +1,8 @@
+2021/03/09-17:04:15.238 5498 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_treasuryxpress.atlassian.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/09-17:04:15.240 5498 Recovering log #121
+2021/03/09-17:04:15.241 5498 Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_treasuryxpress.atlassian.net_0.indexeddb.leveldb/000121.log 
+2021/03/09-17:04:58.420 5498 Level-0 table #125: started
+2021/03/09-17:04:58.420 5498 Level-0 table #125: 0 bytes OK
+2021/03/09-17:04:58.423 5498 Delete type=0 #121
+2021/03/09-17:04:58.424 5498 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/09-17:04:58.424 5498 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

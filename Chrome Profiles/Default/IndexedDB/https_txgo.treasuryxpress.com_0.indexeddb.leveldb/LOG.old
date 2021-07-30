@@ -1,0 +1,5 @@
+2021/03/15-11:26:10.005 4a9c Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_txgo.treasuryxpress.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/15-11:26:13.019 4a9c Level-0 table #5: started
+2021/03/15-11:26:13.025 4a9c Level-0 table #5: 217 bytes OK
+2021/03/15-11:26:13.030 4a9c Delete type=0 #3
+2021/03/15-11:26:13.031 4a9c Manual compaction at level-0 from (begin) .. (end); will stop at (end)

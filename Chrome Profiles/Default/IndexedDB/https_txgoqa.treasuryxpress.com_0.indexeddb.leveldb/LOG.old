@@ -1,0 +1,5 @@
+2021/04/09-16:58:15.148 fcc Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_txgoqa.treasuryxpress.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/09-16:58:18.198 fcc Level-0 table #5: started
+2021/04/09-16:58:18.204 fcc Level-0 table #5: 217 bytes OK
+2021/04/09-16:58:18.208 fcc Delete type=0 #3
+2021/04/09-16:58:18.209 fcc Manual compaction at level-0 from (begin) .. (end); will stop at (end)

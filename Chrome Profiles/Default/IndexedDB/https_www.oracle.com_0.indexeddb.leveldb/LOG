@@ -1,0 +1,8 @@
+2021/03/01-10:03:04.405 326c Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_www.oracle.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/01-10:03:04.405 326c Recovering log #19
+2021/03/01-10:03:04.405 326c Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_www.oracle.com_0.indexeddb.leveldb/000019.log 
+2021/03/01-10:03:36.403 1f4c Level-0 table #23: started
+2021/03/01-10:03:36.403 1f4c Level-0 table #23: 0 bytes OK
+2021/03/01-10:03:36.408 1f4c Delete type=0 #19
+2021/03/01-10:03:36.408 1f4c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/01-10:03:36.409 1f4c Manual compaction at level-1 from (begin) .. (end); will stop at (end)

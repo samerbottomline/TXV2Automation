@@ -1,0 +1,15 @@
+2021/04/09-18:12:56.955 1954 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_txgoqa.treasuryxpress.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/09-18:12:56.956 1954 Recovering log #4
+2021/04/09-18:12:56.957 1954 Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_txgoqa.treasuryxpress.com_0.indexeddb.leveldb/000004.log 
+2021/04/09-18:12:58.976 2910 Level-0 table #8: started
+2021/04/09-18:12:58.982 2910 Level-0 table #8: 190 bytes OK
+2021/04/09-18:12:58.986 2910 Delete type=0 #4
+2021/04/09-18:12:58.987 2910 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/09-18:12:58.987 2910 Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x00\x00\x00\x05' @ 4 : 1
+2021/04/09-18:12:58.987 2910 Compacting 1@1 + 1@2 files
+2021/04/09-18:12:58.993 2910 Generated table #9@1: 4 keys, 236 bytes
+2021/04/09-18:12:58.993 2910 Compacted 1@1 + 1@2 files => 236 bytes
+2021/04/09-18:12:58.996 2910 compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/04/09-18:12:58.997 2910 Delete type=2 #5
+2021/04/09-18:12:58.997 2910 Delete type=2 #8
+2021/04/09-18:12:58.998 2910 Manual compaction at level-1 from '\x00\x00\x00\x00\x05' @ 4 : 1 .. (end); will stop at (end)

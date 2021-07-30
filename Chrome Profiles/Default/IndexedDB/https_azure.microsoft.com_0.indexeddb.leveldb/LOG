@@ -1,0 +1,5 @@
+2021/03/09-10:25:06.165 3b14 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_azure.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/09-10:43:00.425 3b14 Level-0 table #5: started
+2021/03/09-10:43:00.430 3b14 Level-0 table #5: 3569 bytes OK
+2021/03/09-10:43:00.433 3b14 Delete type=0 #3
+2021/03/09-10:43:00.434 3b14 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

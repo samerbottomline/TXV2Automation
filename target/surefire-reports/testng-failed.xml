@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Daily Treasury]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <parameter name="Status" value="Active"/>
+    <parameter name="Account ID" value="Account id"/>
+    <parameter name="Account Number" value="Account number"/>
+    <parameter name="Bank Branch Name" value="Manchester Branch"/>
+    <parameter name="IBAN" value="IBAN13376969"/>
+    <parameter name="Child Account ID" value="Austria GmbH 123"/>
+    <parameter name="Project Name" value="Project Star Nordic"/>
+    <parameter name="Account Name" value="Account name"/>
+    <parameter name="Company ID" value="RIO CONDOS"/>
+    <parameter name="Currency" value="USD"/>
+    <parameter name="Account Label Name" value="Cash Account"/>
+    <parameter name="Bank Number" value="Bank number"/>
+    <parameter name="Account Type" value="Term Account"/>
+    <parameter name="Bank ID" value="Suntrust"/>
+    <classes>
+      <class name="com.bottomline.tests.AccountCRUD">
+        <methods>
+          <include name="Add"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- com.bottomline.tests.AccountCRUD -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Daily Treasury] -->

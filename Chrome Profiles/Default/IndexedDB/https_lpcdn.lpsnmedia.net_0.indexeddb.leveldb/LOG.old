@@ -1,0 +1,5 @@
+2021/03/01-12:57:52.622 3490 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_lpcdn.lpsnmedia.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/01-13:00:03.869 2894 Level-0 table #5: started
+2021/03/01-13:00:03.873 2894 Level-0 table #5: 6069 bytes OK
+2021/03/01-13:00:03.877 2894 Delete type=0 #3
+2021/03/01-13:00:03.877 2894 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

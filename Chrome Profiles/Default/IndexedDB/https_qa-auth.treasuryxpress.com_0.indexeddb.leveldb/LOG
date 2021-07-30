@@ -1,0 +1,8 @@
+2021/04/27-14:49:59.591 1ec Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_qa-auth.treasuryxpress.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/27-14:49:59.592 1ec Recovering log #43
+2021/04/27-14:49:59.593 1ec Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_qa-auth.treasuryxpress.com_0.indexeddb.leveldb/000043.log 
+2021/04/27-14:50:01.598 844c Level-0 table #47: started
+2021/04/27-14:50:01.598 844c Level-0 table #47: 0 bytes OK
+2021/04/27-14:50:01.603 844c Delete type=0 #43
+2021/04/27-14:50:01.604 844c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/04/27-14:50:01.604 844c Manual compaction at level-1 from (begin) .. (end); will stop at (end)

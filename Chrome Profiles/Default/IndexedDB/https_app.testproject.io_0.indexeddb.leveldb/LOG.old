@@ -1,0 +1,8 @@
+2021/03/09-10:09:48.264 357c Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_app.testproject.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/09-10:09:48.265 357c Recovering log #28
+2021/03/09-10:09:48.266 357c Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_app.testproject.io_0.indexeddb.leveldb/000028.log 
+2021/03/09-10:09:50.327 357c Level-0 table #33: started
+2021/03/09-10:09:50.327 357c Level-0 table #33: 0 bytes OK
+2021/03/09-10:09:50.331 357c Delete type=0 #28
+2021/03/09-10:09:50.332 357c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/09-10:09:50.332 357c Manual compaction at level-1 from (begin) .. (end); will stop at (end)

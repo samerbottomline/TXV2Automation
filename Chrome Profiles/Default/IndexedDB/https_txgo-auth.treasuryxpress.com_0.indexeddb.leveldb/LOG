@@ -1,0 +1,8 @@
+2021/03/15-11:27:08.537 4508 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_txgo-auth.treasuryxpress.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/15-11:27:08.539 4508 Recovering log #19
+2021/03/15-11:27:08.539 4508 Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_txgo-auth.treasuryxpress.com_0.indexeddb.leveldb/000019.log 
+2021/03/15-11:27:10.550 4508 Level-0 table #23: started
+2021/03/15-11:27:10.550 4508 Level-0 table #23: 0 bytes OK
+2021/03/15-11:27:10.556 4508 Delete type=0 #19
+2021/03/15-11:27:10.557 4508 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/15-11:27:10.557 4508 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

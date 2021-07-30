@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 0.915 s <<< FAILURE! - in TestSuite
+com.bottomline.tests.AccountCRUD.beforeClass  Time elapsed: 0.567 s  <<< FAILURE!
+java.lang.NoSuchMethodError: 'org.openqa.selenium.chrome.ChromeOptions org.openqa.selenium.chrome.ChromeOptions.addArguments(java.lang.String[])'
+

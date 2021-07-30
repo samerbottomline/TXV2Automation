@@ -1,0 +1,5 @@
+2021/03/01-12:57:54.352 2ae0 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_visualstudio.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/01-13:00:03.880 2894 Level-0 table #5: started
+2021/03/01-13:00:03.883 2894 Level-0 table #5: 1555 bytes OK
+2021/03/01-13:00:03.887 2894 Delete type=0 #3
+2021/03/01-13:00:03.887 2894 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

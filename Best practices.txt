@@ -1,0 +1,17 @@
+There are a few best practices in using page objects, that we should make an effort to follow.
+
++++ A page object should not have any assertions (page objects are strictly under com.bottomline.pages package)
++++ A page object should represent meaningful elements of a page and not necessarily a complete page 
++++ When you navigate you should return the a page object for the next page
+
+*********************************************************************************************************
+********************************	CREATING NEW TEST	*************************************************
+*********************************************************************************************************
+
+create object in objects package	
+create page in pages package, extend the base class from common package, create constructor
+create tests in tests package, extend fundamentals class from common package
+
+*********************************************************************************************************
+*********************************************************************************************************
+*********************************************************************************************************

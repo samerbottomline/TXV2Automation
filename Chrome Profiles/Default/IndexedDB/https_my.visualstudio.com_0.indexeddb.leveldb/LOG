@@ -1,0 +1,8 @@
+2021/03/09-17:01:11.989 24a8 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_my.visualstudio.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/09-17:01:11.990 24a8 Recovering log #7
+2021/03/09-17:01:11.991 24a8 Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_my.visualstudio.com_0.indexeddb.leveldb/000007.log 
+2021/03/09-17:01:25.725 450c Level-0 table #11: started
+2021/03/09-17:01:25.725 450c Level-0 table #11: 0 bytes OK
+2021/03/09-17:01:25.731 450c Delete type=0 #7
+2021/03/09-17:01:25.731 450c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/09-17:01:25.731 450c Manual compaction at level-1 from (begin) .. (end); will stop at (end)

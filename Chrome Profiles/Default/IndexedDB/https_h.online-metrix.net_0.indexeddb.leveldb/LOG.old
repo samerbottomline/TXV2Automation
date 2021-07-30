@@ -1,0 +1,8 @@
+2021/03/09-17:01:04.894 450c Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_h.online-metrix.net_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/09-17:01:04.895 450c Recovering log #4
+2021/03/09-17:01:04.896 450c Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_h.online-metrix.net_0.indexeddb.leveldb/000004.log 
+2021/03/09-17:01:11.215 24a8 Level-0 table #8: started
+2021/03/09-17:01:11.215 24a8 Level-0 table #8: 0 bytes OK
+2021/03/09-17:01:11.219 24a8 Delete type=0 #4
+2021/03/09-17:01:11.220 24a8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/09-17:01:11.220 24a8 Manual compaction at level-1 from (begin) .. (end); will stop at (end)

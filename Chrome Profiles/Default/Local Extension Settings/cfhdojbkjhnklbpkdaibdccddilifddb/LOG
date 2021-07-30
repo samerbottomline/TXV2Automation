@@ -1,0 +1,19 @@
+2021/07/19-10:41:34.481 1710 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\Local Extension Settings\cfhdojbkjhnklbpkdaibdccddilifddb/MANIFEST-000001
+2021/07/19-10:41:34.485 1710 Recovering log #6966
+2021/07/19-10:41:34.544 1710 Level-0 table #6969: started
+2021/07/19-10:41:34.648 1710 Level-0 table #6969: 6475170 bytes OK
+2021/07/19-10:41:34.657 1710 Delete type=0 #6966
+2021/07/19-10:41:34.661 23a4 Compacting 4@0 + 2@1 files
+2021/07/19-10:41:34.996 23a4 Generated table #6971@0: 1 keys, 6474945 bytes
+2021/07/19-10:41:35.035 23a4 Generated table #6972@0: 6 keys, 568 bytes
+2021/07/19-10:41:35.036 23a4 Compacted 4@0 + 2@1 files => 6475513 bytes
+2021/07/19-10:41:35.037 23a4 compacted to: files[ 0 2 1 0 0 0 0 ]
+2021/07/19-10:42:38.508 1710 Level-0 table #6974: started
+2021/07/19-10:42:38.594 1710 Level-0 table #6974: 6475039 bytes OK
+2021/07/19-10:42:38.600 1710 Delete type=2 #6959
+2021/07/19-10:42:38.600 1710 Delete type=2 #6960
+2021/07/19-10:42:38.600 1710 Delete type=2 #6962
+2021/07/19-10:42:38.600 1710 Delete type=2 #6965
+2021/07/19-10:42:38.600 1710 Delete type=2 #6967
+2021/07/19-10:42:38.600 1710 Delete type=2 #6969
+2021/07/19-10:42:38.600 1710 Delete type=0 #6970

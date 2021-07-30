@@ -1,0 +1,5 @@
+2021/03/01-16:15:49.328 3578 Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_music.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/01-16:51:01.146 2b68 Level-0 table #5: started
+2021/03/01-16:51:01.161 2b68 Level-0 table #5: 1158 bytes OK
+2021/03/01-16:51:01.165 2b68 Delete type=0 #3
+2021/03/01-16:51:01.165 2b68 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,15 @@
+2021/03/09-10:11:50.428 357c Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_app.testproject.io_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/09-10:11:50.429 357c Recovering log #32
+2021/03/09-10:11:50.430 357c Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_app.testproject.io_0.indexeddb.leveldb/000032.log 
+2021/03/09-10:11:52.909 357c Level-0 table #36: started
+2021/03/09-10:11:52.923 357c Level-0 table #36: 1098 bytes OK
+2021/03/09-10:11:52.925 357c Delete type=0 #32
+2021/03/09-10:11:52.926 357c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/09-10:11:52.926 357c Manual compaction at level-1 from (begin) .. (end); will stop at '\x00\x01\x01\x02\x01\x0d\x00h\x00o\x00m\x00e\x00.\x00p\x00r\x00o\x00j\x00e\x00c\x00t\x00s' @ 158 : 1
+2021/03/09-10:11:52.926 357c Compacting 1@1 + 1@2 files
+2021/03/09-10:11:52.930 357c Generated table #37@1: 28 keys, 6140 bytes
+2021/03/09-10:11:52.930 357c Compacted 1@1 + 1@2 files => 6140 bytes
+2021/03/09-10:11:52.931 357c compacted to: files[ 0 0 1 0 0 0 0 ]
+2021/03/09-10:11:52.932 357c Delete type=2 #30
+2021/03/09-10:11:52.932 357c Delete type=2 #36
+2021/03/09-10:11:52.933 357c Manual compaction at level-1 from '\x00\x01\x01\x02\x01\x0d\x00h\x00o\x00m\x00e\x00.\x00p\x00r\x00o\x00j\x00e\x00c\x00t\x00s' @ 158 : 1 .. (end); will stop at (end)

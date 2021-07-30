@@ -1,0 +1,8 @@
+2021/03/04-12:44:13.447 255c Reusing MANIFEST C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_yt1s.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/03/04-12:44:13.448 255c Recovering log #11
+2021/03/04-12:44:13.448 255c Reusing old log C:\Users\fouad.rached\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_yt1s.com_0.indexeddb.leveldb/000011.log 
+2021/03/04-12:45:00.583 211c Level-0 table #15: started
+2021/03/04-12:45:00.583 211c Level-0 table #15: 0 bytes OK
+2021/03/04-12:45:00.587 211c Delete type=0 #11
+2021/03/04-12:45:00.588 211c Manual compaction at level-0 from (begin) .. (end); will stop at (end)
+2021/03/04-12:45:00.589 211c Manual compaction at level-1 from (begin) .. (end); will stop at (end)
