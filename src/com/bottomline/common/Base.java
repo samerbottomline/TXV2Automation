@@ -43,6 +43,7 @@ public class Base extends BaseObject {
 
 	}
 
+	@SuppressWarnings("deprecation")
 	protected boolean WaitForElement(WebElement element) {
 
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
@@ -60,9 +61,63 @@ public class Base extends BaseObject {
 
 		wait.withTimeout(5, TimeUnit.SECONDS);
 		wait.pollingEvery(1, TimeUnit.SECONDS);
-		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(by)));
+		wait.until(ExpectedConditions.elementToBeClickable(by));
 
 		return true;
+	}
+
+	@SuppressWarnings("deprecation")
+	protected boolean WaitForInvisibility(WebElement element) {
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
+		wait.withTimeout(5, TimeUnit.SECONDS);
+		wait.pollingEvery(1, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.invisibilityOf(element));
+
+		return true;
+	}
+
+	@SuppressWarnings("deprecation")
+	protected boolean WaitForInvisibility(By by) {
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
+		wait.withTimeout(10, TimeUnit.SECONDS);
+		wait.pollingEvery(1, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
+
+		return true;
+	}
+
+	@SuppressWarnings("deprecation")
+	protected boolean WaitForVisibility(By by) {
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
+		wait.withTimeout(10, TimeUnit.SECONDS);
+		wait.pollingEvery(1, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+
+		return true;
+	}
+
+	@SuppressWarnings("deprecation")
+	protected boolean WaitForVisibility(WebElement element) {
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
+		wait.withTimeout(10, TimeUnit.SECONDS);
+		wait.pollingEvery(1, TimeUnit.SECONDS);
+		wait.until(ExpectedConditions.visibilityOf(element));
+
+		return true;
+	}
+
+	@SuppressWarnings("deprecation")
+	protected boolean WaitForText(By by, String value) {
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
+		wait.withTimeout(5, TimeUnit.SECONDS);
+		wait.pollingEvery(1, TimeUnit.SECONDS);
+		return wait.until(ExpectedConditions.textToBePresentInElementLocated(by, value));
+
 	}
 
 	// end region wait
@@ -81,6 +136,7 @@ public class Base extends BaseObject {
 	}
 
 	protected boolean Clear(By by) {
+		WaitForElement(by);
 		driver.findElement(by).clear();
 		return true;
 	}
@@ -91,6 +147,7 @@ public class Base extends BaseObject {
 			element.click();
 			return true;
 		} catch (Exception e) {
+
 			return false;
 		}
 	}
@@ -114,6 +171,12 @@ public class Base extends BaseObject {
 	protected boolean Write(WebElement element, Keys key) {
 		WaitForElement(element);
 		element.sendKeys(key);
+		return true;
+	}
+
+	protected boolean Write(By by, Keys key) {
+		WaitForElement(by);
+		driver.findElement(by).sendKeys(key);
 		return true;
 	}
 
@@ -159,31 +222,55 @@ public class Base extends BaseObject {
 
 			// if column found by column name
 			if (allColumns.get(j).getText().equals(columnName)) {
-
-				WebElement filterBox = driver.findElement(GetFilterTextBox(gridTitle, j));
-
 				// clear filter text box, write your search value and hit TAB to allow grid to
 				// load since hitting ENTER sometimes closes the dialog (bug)
-				Clear(filterBox);
-				Write(filterBox, searchValue);
-				Write(filterBox, Keys.TAB);
+				Clear(GetFilterTextBox(gridTitle, j));
+				Write(GetFilterTextBox(gridTitle, j), searchValue);
+				Write(GetFilterTextBox(gridTitle, j), Keys.TAB);
 				break;
 			}
 		}
 
 		// we select our row
-		WebElement row = driver.findElement(GetRow(gridTitle, 1));
+		WaitForText(GetAllRows(gridTitle), searchValue);
+		WebElement row = driver.findElement(GetRow(gridTitle, searchValue));// to be fixed, always selecting first
+																			// record
 
 		if (row == null) {
 			return false;
 		}
 
-		Click(row);
-		Click(GetDoneButton(gridTitle));
+		if (Click(row)) {
+			Click(GetDoneButton(gridTitle));
+		} else {
+			return false;
+		}
+
+		return true;
+
+	}
+
+	protected boolean DropDown(String fieldName, String value) {
+
+		WebElement dropDown = driver.findElement(GetDropDownBox(fieldName));
+
+		Write(dropDown, value);
+		Write(dropDown, Keys.ARROW_DOWN);
+		Write(dropDown, Keys.ENTER);
 
 		return true;
 
 	}
 	// end Actions
+
+	protected String GetToastMsg() {
+
+		WaitForElement(toastBy);
+		String message = driver.findElement(toastBy).getText();
+
+		WaitForInvisibility(toastBy);
+
+		return message;
+	}
 
 }

@@ -5,7 +5,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import com.bottomline.common.Base;
-import com.bottomline.loging.Report;
 import com.bottomline.objects.LoginObject;
 
 //Login page used to authenticate to our version 2 application

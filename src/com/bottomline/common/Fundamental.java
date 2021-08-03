@@ -19,6 +19,8 @@ public class Fundamental {
 	
 	@AfterClass
 	public static void afterClass() {
+		driver.manage().deleteAllCookies();
 		driver.quit();
+		
 	}
 }

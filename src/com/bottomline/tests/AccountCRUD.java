@@ -1,12 +1,12 @@
 package com.bottomline.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.bottomline.common.Functions;
 import com.bottomline.common.Fundamental;
 import com.bottomline.pages.Account;
-import com.bottomline.pages.Administration;
 import com.bottomline.pages.Login;
 
 //Basic operations for account module, ADD EDIT DELETE
@@ -25,10 +25,12 @@ public class AccountCRUD extends Fundamental {
 
 		String defaultUsername = Functions.GetProperty("DefaultUsername");
 		String defaultPassword = Functions.GetProperty("DefaultPassword");
-
+		
 		login.login(defaultUsername, defaultPassword);
 		account.Navigate();
 		account.Add(accountType, accountID, bankAccountNumber, accountName, currency, accountNumber, iban, status,
 				bankID, companyID, accountLabelName, bankBranchName, childAccountID, projectName);
+		
+		Assert.assertEquals(account.obj.Toast, "Successfully Added");
 	}
 }

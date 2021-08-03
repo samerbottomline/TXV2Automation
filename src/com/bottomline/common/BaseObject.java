@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class BaseObject {
 
 	By dialogs = By.xpath("//h2[@class='mdc-dialog__title']");
+	By toastBy = By.xpath("//div[@class='tx-toast-body']");
 
 	// here we search inside dialogs(dialog found by dialog title) for the search
 	// bar element
@@ -47,10 +48,16 @@ public class BaseObject {
 		return filterTextBox;
 	}
 
-	public By GetRow(String gridTitle, int rowIndex) {
-		String xpath = "//h2[@class='mdc-dialog__title'][contains(text(),'" + gridTitle + "')]/parent::div//tbody/tr["
-				+ rowIndex + "]/td[1]//input[@type='radio']/parent::div";
+	public By GetAllRows(String gridTitle) {
+		String xpath = "//h2[@class='mdc-dialog__title'][contains(text(),'" + gridTitle + "')]/parent::div//tbody/tr";
+		By row = By.xpath(xpath);
 
+		return row;
+	}
+
+	public By GetRow(String gridTitle, String value) {
+		String xpath = "//h2[@class='mdc-dialog__title'][contains(text(),'" + gridTitle
+				+ "')]/parent::div//tbody/tr[1]/td[contains(text(),'" + value + "')]";
 		By row = By.xpath(xpath);
 
 		return row;
@@ -64,7 +71,16 @@ public class BaseObject {
 		return done;
 	}
 
+	public By GetDropDownBox(String label) {
+		String xpath = "//label[text()='" + label + "']/parent::div/div[@class='tx-textbox-input']//input";
+		By dropDownBox = By.xpath(xpath);
+		return dropDownBox;
+	}
+
 	@FindBy(className = "tx-loader")
 	WebElement txLoader;
+
+	@FindBy(xpath = "//div[@class='tx-toast-body']")
+	WebElement toast;
 
 }

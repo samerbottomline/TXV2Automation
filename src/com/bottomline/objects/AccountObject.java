@@ -50,22 +50,22 @@ public class AccountObject {
 	@FindBy(xpath = "//label[text() = 'Status']//following-sibling::div//input")
 	public WebElement Status;
 
-	@FindBy(xpath = "//label[text() = 'Bank']//following-sibling::div[@class='row']//button[text()='Select']")
+	@FindBy(xpath = "//label[text() = 'Bank']/..//div[@class='input-group-append']")
 	public WebElement Bank;
 
-	@FindBy(xpath = "//label[text() = 'Company']//following-sibling::div[@class='row']//button[text()='Select']")
+	@FindBy(xpath = "//label[text() = 'Company']/..//div[@class='input-group-append']")
 	public WebElement Company;
 
-	@FindBy(xpath = "//label[text() = 'Accounts Label']//following-sibling::div[@class='row']//button[text()='Select']")
+	@FindBy(xpath = "//label[text() = 'Accounts Label']/..//div[@class='input-group-append']")
 	public WebElement AccountsLabel;
 
-	@FindBy(xpath = "//label[text() = 'Bank Branch']//following-sibling::div[@class='row']//button[text()='Select']")
+	@FindBy(xpath = "//label[text() = 'Bank Branch']/..//div[@class='input-group-append']")
 	public WebElement BankBranch;
 
-	@FindBy(xpath = "//label[text() = 'Child Account Number']//following-sibling::div[@class='row']//button[text()='Select']")
-	public WebElement ChildAccountNumber;
+	@FindBy(xpath = "//label[text() = 'Parent Account']/..//div[@class='input-group-append']")
+	public WebElement ParentAccount;
 
-	@FindBy(xpath = "//label[text() = 'Project']//following-sibling::div[@class='row']//button[text()='Select']")
+	@FindBy(xpath = "//label[text() = 'Project']/..//div[@class='input-group-append']")
 	public WebElement Project;
 
 }
