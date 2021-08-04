@@ -6,11 +6,14 @@ import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NotFoundException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 //BASE CLASS CONTAINS ALL NECCESSARY AND REPETITIVE ACTIONS NEEDED TO INTERACT WITH ANY PAGE
 public class Base extends BaseObject {
@@ -22,45 +25,37 @@ public class Base extends BaseObject {
 		this.driver = driver;
 	}
 
+	// region driver stuff
+	protected String GetCurrentURL() {
+		return driver.getCurrentUrl();
+	}
+	// end region driver stuff
+
 	// region wait
 
-	@SuppressWarnings({ "deprecation" })
-	protected boolean WaitForLoad(int timeout, int polling) {
+	protected boolean WaitForLoad(int timeout) {
 
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-		wait.withTimeout(5, TimeUnit.SECONDS);
-		wait.pollingEvery(1, TimeUnit.SECONDS);
-
-		WebElement element = wait.until(new Function<WebDriver, WebElement>() {
-
-			public WebElement apply(WebDriver driver) {
-
-				return driver.findElement(By.className("tx-loader"));
-			}
-		});
-
-		return true;
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, timeout);
+			wait.until(ExpectedConditions.presenceOfElementLocated(txLoader));
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(txLoader));
+			return true;
+		} catch (TimeoutException e) {
+			return false;
+		}
 
 	}
 
-	@SuppressWarnings("deprecation")
-	protected boolean WaitForElement(WebElement element) {
+	protected boolean WaitForElement(WebElement element, int timeout) {
 
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-
-		wait.withTimeout(5, TimeUnit.SECONDS);
-		wait.pollingEvery(1, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
-
 		return true;
 	}
 
-	protected boolean WaitForElement(By by) {
+	protected boolean WaitForElement(By by, int timeout) {
 
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-
-		wait.withTimeout(5, TimeUnit.SECONDS);
-		wait.pollingEvery(1, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		wait.until(ExpectedConditions.elementToBeClickable(by));
 
 		return true;
@@ -78,35 +73,22 @@ public class Base extends BaseObject {
 	}
 
 	@SuppressWarnings("deprecation")
-	protected boolean WaitForInvisibility(By by) {
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-
-		wait.withTimeout(10, TimeUnit.SECONDS);
-		wait.pollingEvery(1, TimeUnit.SECONDS);
+	protected boolean WaitForInvisibility(By by, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
 
 		return true;
 	}
 
-	@SuppressWarnings("deprecation")
-	protected boolean WaitForVisibility(By by) {
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-
-		wait.withTimeout(10, TimeUnit.SECONDS);
-		wait.pollingEvery(1, TimeUnit.SECONDS);
+	protected boolean WaitForVisibility(By by, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-
 		return true;
 	}
 
-	@SuppressWarnings("deprecation")
-	protected boolean WaitForVisibility(WebElement element) {
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-
-		wait.withTimeout(10, TimeUnit.SECONDS);
-		wait.pollingEvery(1, TimeUnit.SECONDS);
+	protected boolean WaitForVisibility(WebElement element, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		wait.until(ExpectedConditions.visibilityOf(element));
-
 		return true;
 	}
 
@@ -124,26 +106,43 @@ public class Base extends BaseObject {
 
 	// region check for elements
 	protected boolean CheckElementExist(WebElement element) {
-		return element.isDisplayed();
+		if (element != null) {
+
+			return element.isDisplayed();
+
+		} else {
+			return false;
+		}
+
+	}
+
+	protected boolean CheckElementExist(By by) {
+
+		try {
+			return driver.findElement(by).isDisplayed();
+
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+
 	}
 	// end region check for elements
 
 	// region Actions
 
 	protected boolean Clear(WebElement element) {
-		// to be implemented
+		element.clear();
 		return true;
 	}
 
 	protected boolean Clear(By by) {
-		WaitForElement(by);
 		driver.findElement(by).clear();
 		return true;
 	}
 
-	protected boolean Click(WebElement element) {
+	protected boolean Click(WebElement element, int timeout) {
 		try {
-			WaitForElement(element);
+			WaitForElement(element, timeout);
 			element.click();
 			return true;
 		} catch (Exception e) {
@@ -152,9 +151,9 @@ public class Base extends BaseObject {
 		}
 	}
 
-	protected boolean Click(By by) {
+	protected boolean Click(By by, int timeout) {
 		try {
-			WaitForElement(by);
+			WaitForElement(by, timeout);
 			driver.findElement(by).click();
 			return true;
 		} catch (Exception e) {
@@ -162,31 +161,31 @@ public class Base extends BaseObject {
 		}
 	}
 
-	protected boolean Write(WebElement element, String value) {
-		WaitForElement(element);
+	protected String Write(WebElement element, String value, int timeout) {
+		WaitForElement(element, timeout);
 		element.sendKeys(value);
-		return true;
+		return element.getText();
 	}
 
-	protected boolean Write(WebElement element, Keys key) {
-		WaitForElement(element);
+	protected boolean Write(WebElement element, Keys key, int timeout) {
+		WaitForElement(element, timeout);
 		element.sendKeys(key);
 		return true;
 	}
 
-	protected boolean Write(By by, Keys key) {
-		WaitForElement(by);
+	protected boolean Write(By by, Keys key, int timeout) {
+		WaitForElement(by, timeout);
 		driver.findElement(by).sendKeys(key);
 		return true;
 	}
 
-	protected boolean Write(By by, String value) {
-		WaitForElement(by);
+	protected boolean Write(By by, String value, int timeout) {
+		WaitForElement(by, timeout);
 		driver.findElement(by).sendKeys(value);
 		return true;
 	}
 
-	protected boolean SelectFromPopupGrid(String gridTitle, String columnName, String searchValue) {
+	protected boolean SelectFromPopupGrid(String gridTitle, String columnName, String searchValue, int timeout) {
 
 		// getting list of all dialogs
 		WebElement allDialogs = driver.findElement(dialogs);
@@ -210,8 +209,11 @@ public class Base extends BaseObject {
 		// if not found, we click the filter button to show the search bar
 		if (!searchBarFound) {
 			WebElement filterButton = driver.findElement(GetFilterButton(gridTitle));
-			Click(filterButton);
+			Click(filterButton, timeout);
 		}
+
+		// wait for dialog to fully load by waiting for grid body to show
+		WaitForVisibility(GetGridBody(gridTitle), timeout);
 
 		// now that we are sure there is a displayed search bar, we grab all columns of
 		// the grid
@@ -225,8 +227,8 @@ public class Base extends BaseObject {
 				// clear filter text box, write your search value and hit TAB to allow grid to
 				// load since hitting ENTER sometimes closes the dialog (bug)
 				Clear(GetFilterTextBox(gridTitle, j));
-				Write(GetFilterTextBox(gridTitle, j), searchValue);
-				Write(GetFilterTextBox(gridTitle, j), Keys.TAB);
+				Write(GetFilterTextBox(gridTitle, j), searchValue, timeout);
+				Write(GetFilterTextBox(gridTitle, j), Keys.TAB, timeout);
 				break;
 			}
 		}
@@ -240,8 +242,8 @@ public class Base extends BaseObject {
 			return false;
 		}
 
-		if (Click(row)) {
-			Click(GetDoneButton(gridTitle));
+		if (Click(row, timeout)) {
+			Click(GetDoneButton(gridTitle), timeout);
 		} else {
 			return false;
 		}
@@ -250,13 +252,13 @@ public class Base extends BaseObject {
 
 	}
 
-	protected boolean DropDown(String fieldName, String value) {
+	protected boolean DropDown(String fieldName, String value, int timeout) {
 
 		WebElement dropDown = driver.findElement(GetDropDownBox(fieldName));
 
-		Write(dropDown, value);
-		Write(dropDown, Keys.ARROW_DOWN);
-		Write(dropDown, Keys.ENTER);
+		Write(dropDown, value, timeout);
+		Write(dropDown, Keys.ARROW_DOWN, timeout);
+		Write(dropDown, Keys.ENTER, timeout);
 
 		return true;
 
@@ -265,12 +267,37 @@ public class Base extends BaseObject {
 
 	protected String GetToastMsg() {
 
-		WaitForElement(toastBy);
+		WaitForElement(toastBy, 5);
 		String message = driver.findElement(toastBy).getText();
 
-		WaitForInvisibility(toastBy);
+		WaitForInvisibility(toastBy, 10);
 
 		return message;
+	}
+
+	protected Boolean Search(String columnName, String value, int timeout) {
+		Boolean found = false;
+
+		if (!CheckElementExist(searchBar)) {
+			Click(filterButton, timeout);
+		}
+
+		List<WebElement> allColumns = driver.findElements(columns);
+
+		for (int j = 0; j <= allColumns.size(); j++) {
+			if (allColumns.get(j).getText().equals(columnName)) {
+				Write(GetMainFilterTextBox(j), value, timeout);
+				Write(GetMainFilterTextBox(j), Keys.TAB, timeout);
+
+				// waiting some time to let the grid refresh, if you find another way contact
+				// detollino
+				WaitForLoad(3);
+				found = Click(GetMainRow(j), timeout);
+				break;
+			}
+		}
+
+		return found;
 	}
 
 }

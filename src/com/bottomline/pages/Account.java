@@ -1,6 +1,5 @@
 package com.bottomline.pages;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 import com.bottomline.common.Base;
+import com.bottomline.common.Randoms;
 import com.bottomline.objects.AccountObject;
 
 public class Account extends Base {
@@ -32,64 +32,63 @@ public class Account extends Base {
 	public AccountObject Add(String accountType, String accountID, String bankAccountNumber, String accountName,
 			String currency, String accountNumber, String iban, String status, String bankID, String companyID,
 			String accountLabelName, String bankBranchName, String parentAccountID, String projectName) {
-		
+		int timeout = 5;
 		System.out.println("Clicking add");
-		//add new
-		Click(obj.Add);
-		
-		
+		// add new
+		Click(obj.Add, timeout);
+
 		System.out.println("click account type and select");
-		Click(obj.AccountType);
-		SelectFromPopupGrid("Account Type", "Account Type Name", accountType);
+		Click(obj.AccountType, timeout);
+		SelectFromPopupGrid("Account Type", "Account Type Name", accountType, timeout);
 
 		System.out.println("write account id");
-		Write(obj.AccountID, accountID);
+		Write(obj.AccountID, accountID, timeout);
 
 		System.out.println("write bank account number");
-		Write(obj.BankAccountNumber, bankAccountNumber);
+		Write(obj.BankAccountNumber, bankAccountNumber, timeout);
 
 		System.out.println("write account name");
-		Write(obj.AccountName, accountName);
+		Write(obj.AccountName, accountName, timeout);
 
 		System.out.println("selecting from dropdown currency");
-		DropDown("Currency", currency);
+		DropDown("Currency", currency, timeout);
 
 		System.out.println("writing account number");
-		Write(obj.AccountNumber, accountNumber);
+		Write(obj.AccountNumber, accountNumber, timeout);
 
 		System.out.println("writing iban");// IBAN
-		Write(obj.IBAN, iban);
+		Write(obj.IBAN, iban, timeout);
 
 		System.out.println("dropdown status");// status
-		DropDown("Status", status);
+		DropDown("Status", status, timeout);
 
 		System.out.println("selecting bank");// bank
-		Click(obj.Bank);
-		SelectFromPopupGrid("Bank", "Bank ID", bankID);
+		Click(obj.Bank, timeout);
+		SelectFromPopupGrid("Bank", "Bank ID", bankID, timeout);
 
 		System.out.println("selecting company");
-		Click(obj.Company);
-		SelectFromPopupGrid("Company", "Company Id", companyID);
+		Click(obj.Company, timeout);
+		SelectFromPopupGrid("Company", "Company Id", companyID, timeout);
 
 		System.out.println("selecting account label");
-		Click(obj.AccountsLabel);
-		SelectFromPopupGrid("Accounts Label", "Account Label Name", accountLabelName);
+		Click(obj.AccountsLabel, timeout);
+		SelectFromPopupGrid("Accounts Label", "Account Label Name", accountLabelName, timeout);
 
 		System.out.println("selecting bank branc");
-		Click(obj.BankBranch);
-		SelectFromPopupGrid("Bank Branch", "Bank Branch Name", bankBranchName);
-
-		System.out.println("selecting parent account");
-		Click(obj.ParentAccount);
-		SelectFromPopupGrid("Parent Account", "Account Id", parentAccountID);
+		Click(obj.BankBranch, timeout);
+		SelectFromPopupGrid("Bank Branch", "Bank Branch Name", bankBranchName, timeout);
 
 		System.out.println("selecting project");
-		Click(obj.Project);
-		SelectFromPopupGrid("Project", "Project Name", projectName);
+		Click(obj.Project, timeout);
+		SelectFromPopupGrid("Project", "Project Name", projectName, timeout);
+
+		System.out.println("selecting parent account");
+		Click(obj.ParentAccount, timeout);
+		SelectFromPopupGrid("Parent Account", "Account Id", parentAccountID, timeout);
 
 		System.out.println("clicking save");
-		Click(obj.Save);
-		
+		Click(obj.Save, timeout);
+
 		System.out.println("getting toast message");
 		obj.Toast = GetToastMsg();
 
@@ -97,4 +96,23 @@ public class Account extends Base {
 
 	}
 
+	public AccountObject Edit(String accountID) {
+
+		int timeout = 5;
+
+		if (!Search("Account Id", accountID, 5)) {
+			return obj;
+		}
+		
+		System.out.println("FOUND");
+		Click(obj.Edit, timeout);
+
+		Clear(obj.AccountID);
+		obj.AccountID_Value = Write(obj.AccountID, Randoms.ID(), 5);
+
+		Click(obj.Save, 3);
+		obj.Toast = GetToastMsg();
+
+		return obj;
+	}
 }

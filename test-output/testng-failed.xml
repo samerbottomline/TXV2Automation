@@ -19,9 +19,9 @@
     <classes>
       <class name="com.bottomline.tests.AccountCRUD">
         <methods>
-          <include name="Add" invocation-numbers="0"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
+          <include name="Edit" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.bottomline.tests.AccountCRUD -->
     </classes>

@@ -1,5 +1,7 @@
 package com.bottomline.common;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +10,11 @@ public class BaseObject {
 
 	By dialogs = By.xpath("//h2[@class='mdc-dialog__title']");
 	By toastBy = By.xpath("//div[@class='tx-toast-body']");
-
+	By txLoader = By.className("tx-loader");
+	By filterButton = By.xpath("//div[@role='toolbar']/div[@role='group']/button");
+	By searchBar = By.xpath("//div[@class='card']//thead/tr[@class='dxbs-filter-row']");
+	By columns = By.xpath("//div[@class='card']//thead/tr[1]/th");
+	
 	// here we search inside dialogs(dialog found by dialog title) for the search
 	// bar element
 	public By GetSearchBar(String gridTitle) {
@@ -48,6 +54,23 @@ public class BaseObject {
 		return filterTextBox;
 	}
 
+	// main search grid filter
+	public By GetMainFilterTextBox(int index) {
+		String xpath = "//div[@class='card']//thead/tr[2]/td[" + index + "]//input";
+
+		By mainFilterTextBox = By.xpath(xpath);
+
+		return mainFilterTextBox;
+	}
+
+	public By GetGridBody(String gridTitle) {
+
+		String xpath = "//h2[@class='mdc-dialog__title'][contains(text(),'" + gridTitle + "')]/..//tbody";
+		By row = By.xpath(xpath);
+
+		return row;
+	}
+
 	public By GetAllRows(String gridTitle) {
 		String xpath = "//h2[@class='mdc-dialog__title'][contains(text(),'" + gridTitle + "')]/parent::div//tbody/tr";
 		By row = By.xpath(xpath);
@@ -60,6 +83,14 @@ public class BaseObject {
 				+ "')]/parent::div//tbody/tr[1]/td[contains(text(),'" + value + "')]";
 		By row = By.xpath(xpath);
 
+		return row;
+	}
+
+	// for main search grid
+	public By GetMainRow(int columnIndex) {
+		String xpath = "//tbody/tr[1]/td[" + columnIndex + "]";
+
+		By row = By.xpath(xpath);
 		return row;
 	}
 
@@ -77,10 +108,11 @@ public class BaseObject {
 		return dropDownBox;
 	}
 
-	@FindBy(className = "tx-loader")
-	WebElement txLoader;
+	// @FindBy(className = "tx-loader")
+	// WebElement txLoader;
 
 	@FindBy(xpath = "//div[@class='tx-toast-body']")
 	WebElement toast;
+
 
 }

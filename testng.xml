@@ -5,7 +5,7 @@
 	<test thread-count="1" name="Add Account">
 
 		<parameter name="Account Type" value="Term Account" />
-		<parameter name="Account ID" value="Account id" />
+ 		<parameter name="Account ID" value="Account id" /> 
 		<parameter name="Bank Number" value="Bank number" />
 		<parameter name="Account Name" value="Account name" />
 		<parameter name="Currency" value="USD" />
@@ -19,8 +19,10 @@
 		<parameter name="Child Account ID" value="Austria GmbH 123" />
 		<parameter name="Project Name" value="Project Star Nordic" />
 		<classes>
-
 			<class name="com.bottomline.tests.AccountCRUD">
+				<methods>
+					<include name="Edit" />
+				</methods>
 			</class>
 
 		</classes>

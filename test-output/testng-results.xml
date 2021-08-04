@@ -1,102 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-08-03T23:23:51 EEST" name="Daily Treasury" finished-at="2021-08-03T23:25:06 EEST" duration-ms="75174">
+  <suite started-at="2021-08-04T16:57:20 EEST" name="Daily Treasury" finished-at="2021-08-04T16:59:58 EEST" duration-ms="158417">
     <groups>
     </groups>
-    <test started-at="2021-08-03T23:23:51 EEST" name="Add Account" finished-at="2021-08-03T23:25:06 EEST" duration-ms="75174">
+    <test started-at="2021-08-04T16:57:20 EEST" name="Add Account" finished-at="2021-08-04T16:59:58 EEST" duration-ms="158417">
       <class name="com.bottomline.tests.AccountCRUD">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.bottomline.tests.AccountCRUD@6973b51b]" started-at="2021-08-03T23:23:51 EEST" name="beforeClass" finished-at="2021-08-03T23:23:55 EEST" duration-ms="3504" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.bottomline.tests.AccountCRUD@7334aada]" started-at="2021-08-04T16:57:20 EEST" name="beforeClass" finished-at="2021-08-04T16:57:24 EEST" duration-ms="3839" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Add(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.bottomline.tests.AccountCRUD@6973b51b]" started-at="2021-08-03T23:23:55 EEST" name="Add" finished-at="2021-08-03T23:25:06 EEST" duration-ms="71322" status="FAIL">
+        <test-method signature="Edit(java.lang.String)[pri:0, instance:com.bottomline.tests.AccountCRUD@7334aada]" started-at="2021-08-04T16:57:24 EEST" name="Edit" finished-at="2021-08-04T16:59:58 EEST" duration-ms="154171" status="FAIL">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[Term Account]]>
-              </value>
-            </param>
-            <param index="1">
               <value>
                 <![CDATA[Account id]]>
               </value>
             </param>
-            <param index="2">
-              <value>
-                <![CDATA[Bank number]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Account name]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[USD]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Account number]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[IBAN13376969]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Active]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[Suntrust]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[RIO CONDOS]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[Cash Account]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[Manchester Branch]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Austria GmbH 123]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[Project Star Nordic]]>
-              </value>
-            </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[expected [Successfully Added] but found [This record already exists.]]]>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: Proxy element for: AjaxElementLocator 'By.xpath: //label[text() = 'Account Id']//following-sibling::div//input' (tried for 5 second(s) with 500 milliseconds interval)]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Successfully Added] but found [This record already exists.]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at com.bottomline.tests.AccountCRUD.Add(AccountCRUD.java:34)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: AjaxElementLocator 'By.xpath: //label[text() = 'Account Id']//following-sibling::div//input' (tried for 5 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.bottomline.common.Base.WaitForElement(Base.java:52)
+at com.bottomline.common.Base.Write(Base.java:165)
+at com.bottomline.pages.Account.Edit(Account.java:110)
+at com.bottomline.tests.AccountCRUD.Edit(AccountCRUD.java:51)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -125,13 +59,54 @@ at org.testng.TestNG.run(TestNG.java:1031)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Timed out after 30 seconds. Unable to locate the element
+at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:99)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
+at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text() = 'Account Id']//following-sibling::div//input"}
+  (Session info: chrome=92.0.4515.131)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
+System info: host: 'US107559WIN', ip: '10.164.250.65', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.131, chrome: {chromedriverVersion: 92.0.4515.43 (8c61b7e2989f2..., userDataDir: C:\Users\fouad.rached\Docum...}, goog:chromeOptions: {debuggerAddress: localhost:63806}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 367365593e29eb834eaf4e9c4f5e1533
+*** Element info: {Using=xpath, value=//label[text() = 'Account Id']//following-sibling::div//input}
+at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
+at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)
+at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:72)
+at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)
+... 41 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Add -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.bottomline.tests.AccountCRUD@6973b51b]" started-at="2021-08-03T23:25:06 EEST" name="afterClass" finished-at="2021-08-03T23:25:06 EEST" duration-ms="289" status="PASS">
+        </test-method> <!-- Edit -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.bottomline.tests.AccountCRUD@7334aada]" started-at="2021-08-04T16:59:58 EEST" name="afterClass" finished-at="2021-08-04T16:59:58 EEST" duration-ms="352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->

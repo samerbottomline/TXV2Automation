@@ -18,16 +18,16 @@ public class Administration extends Base {
 
 	public void Navigate(String module) {
 
-		Click(obj.DropdownToggle);
-		Click(obj.DropdownItem);
+		Click(obj.DropdownToggle, 5);
+		Click(obj.DropdownItem, 5);
 
 		// if anchor not found after 5 seconds, means there is a sub menu, will expand
 		// and search again
-		if (!Click(obj.GetModuleLink(module)))// make it wait for 5 seconds)
+		if (!Click(obj.GetModuleLink(module), 5))// make it wait for 5 seconds)
 		{
 			// expanding to reveal nested link
-			Click(obj.GetSectionTitleExpand(module));
-			Click(obj.GetModuleLink(module));
+			Click(obj.GetSectionTitleExpand(module), 5);
+			Click(obj.GetModuleLink(module), 5);
 		}
 	}
 }

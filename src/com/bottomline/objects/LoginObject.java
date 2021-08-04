@@ -4,12 +4,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginObject {
-	@FindBy(id="user-name")
+	@FindBy(id = "user-name")
 	public WebElement username;
-	
-	@FindBy(id="Password")
+
+	@FindBy(id = "Password")
 	public WebElement password;
-	
-	@FindBy(xpath="//*/button[@value='login']")
+
+	@FindBy(xpath = "//*/button[@value='login']")
 	public WebElement loginButton;
+
+	@FindBy(xpath = "//a[@id='navbarDropdownMenuLink1']")
+	public WebElement usernameInitials;
 }
