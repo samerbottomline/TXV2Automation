@@ -1,7 +1,5 @@
 package com.bottomline.common;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +12,9 @@ public class BaseObject {
 	By filterButton = By.xpath("//div[@role='toolbar']/div[@role='group']/button");
 	By searchBar = By.xpath("//div[@class='card']//thead/tr[@class='dxbs-filter-row']");
 	By columns = By.xpath("//div[@class='card']//thead/tr[1]/th");
-	
+	By yes = By.xpath("//div[@class='mdc-dialog mdc-dialog--open']//button[text()='Yes']");
+	By no = By.xpath("//div[@class='mdc-dialog mdc-dialog--open']//button[text()='No']");
+
 	// here we search inside dialogs(dialog found by dialog title) for the search
 	// bar element
 	public By GetSearchBar(String gridTitle) {
@@ -108,11 +108,7 @@ public class BaseObject {
 		return dropDownBox;
 	}
 
-	// @FindBy(className = "tx-loader")
-	// WebElement txLoader;
-
 	@FindBy(xpath = "//div[@class='tx-toast-body']")
 	WebElement toast;
-
 
 }

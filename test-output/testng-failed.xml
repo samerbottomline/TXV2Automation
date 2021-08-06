@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Daily Treasury]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Add Account(failed)">
+  <test thread-count="5" name="Account(failed)">
     <parameter name="Status" value="Active"/>
-    <parameter name="Account ID" value="Account id"/>
+    <parameter name="Account ID" value="AutoAcc_"/>
     <parameter name="Account Number" value="Account number"/>
     <parameter name="Bank Branch Name" value="Manchester Branch"/>
     <parameter name="IBAN" value="IBAN13376969"/>
@@ -19,11 +19,13 @@
     <classes>
       <class name="com.bottomline.tests.AccountCRUD">
         <methods>
+          <include name="Add"/>
+          <include name="Delete"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
-          <include name="Edit" invocation-numbers="0"/>
+          <include name="Edit"/>
         </methods>
       </class> <!-- com.bottomline.tests.AccountCRUD -->
     </classes>
-  </test> <!-- Add Account(failed) -->
+  </test> <!-- Account(failed) -->
 </suite> <!-- Failed suite [Daily Treasury] -->

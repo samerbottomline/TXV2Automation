@@ -2,6 +2,7 @@ package com.bottomline.common;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import com.bottomline.pages.Login;
 import org.testng.annotations.AfterClass;
 
 
@@ -15,6 +16,10 @@ public class Fundamental {
 		WebDriverFactory driverFactory = new WebDriverFactory();
 		driver = driverFactory.Create(BrowserType.CHROME, false);
 		driver.get(Functions.GetProperty("BaseURL"));
+	
+		Login login = new Login(driver);
+		
+		login.login(Functions.GetProperty("DefaultUsername"), Functions.GetProperty("DefaultPassword"));
 	}
 	
 	@AfterClass

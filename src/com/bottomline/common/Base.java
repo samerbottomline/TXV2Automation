@@ -2,8 +2,6 @@ package com.bottomline.common;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -61,18 +59,13 @@ public class Base extends BaseObject {
 		return true;
 	}
 
-	@SuppressWarnings("deprecation")
-	protected boolean WaitForInvisibility(WebElement element) {
-		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
-
-		wait.withTimeout(5, TimeUnit.SECONDS);
-		wait.pollingEvery(1, TimeUnit.SECONDS);
+	protected boolean WaitForInvisibility(WebElement element, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		wait.until(ExpectedConditions.invisibilityOf(element));
 
 		return true;
 	}
 
-	@SuppressWarnings("deprecation")
 	protected boolean WaitForInvisibility(By by, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
@@ -93,15 +86,42 @@ public class Base extends BaseObject {
 	}
 
 	@SuppressWarnings("deprecation")
-	protected boolean WaitForText(By by, String value) {
+	protected boolean WaitForText_Value(By by, String value) {
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
+		wait.withTimeout(2, TimeUnit.SECONDS);
+		wait.pollingEvery(3, TimeUnit.SECONDS);
+		return wait.until(ExpectedConditions.textToBePresentInElementValue(by, value));
+
+	}
+
+	@SuppressWarnings("deprecation")
+	protected boolean WaitForText_Value(WebElement element, String value, int timeout) {
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
 
 		wait.withTimeout(5, TimeUnit.SECONDS);
 		wait.pollingEvery(1, TimeUnit.SECONDS);
+		return wait.until(ExpectedConditions.textToBePresentInElementValue(element, value));
+	}
+
+	@SuppressWarnings("deprecation")
+	protected boolean WaitForText_Text(By by, String value) {
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
+		wait.withTimeout(2, TimeUnit.SECONDS);
+		wait.pollingEvery(3, TimeUnit.SECONDS);
 		return wait.until(ExpectedConditions.textToBePresentInElementLocated(by, value));
 
 	}
 
+	@SuppressWarnings("deprecation")
+	protected boolean WaitForText_Text(WebElement element, String value, int timeout) {
+		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
+		wait.withTimeout(5, TimeUnit.SECONDS);
+		wait.pollingEvery(1, TimeUnit.SECONDS);
+		return wait.until(ExpectedConditions.textToBePresentInElement(element, value));
+	}
 	// end region wait
 
 	// region check for elements
@@ -234,7 +254,7 @@ public class Base extends BaseObject {
 		}
 
 		// we select our row
-		WaitForText(GetAllRows(gridTitle), searchValue);
+		WaitForText_Text(GetAllRows(gridTitle), searchValue);
 		WebElement row = driver.findElement(GetRow(gridTitle, searchValue));// to be fixed, always selecting first
 																			// record
 
@@ -263,11 +283,26 @@ public class Base extends BaseObject {
 		return true;
 
 	}
+
+	protected boolean ConfirmDelete(boolean confirm) {
+		boolean confirmed = false;
+
+		if (confirm) {
+			WaitForElement(yes, 5);
+			confirmed = Click(yes, 5);
+		} else {
+			WaitForElement(no, 5);
+			confirmed = Click(no, 5);
+		}
+
+		return confirmed;
+	}
+
 	// end Actions
 
 	protected String GetToastMsg() {
 
-		WaitForElement(toastBy, 5);
+		WaitForElement(toastBy, 10);
 		String message = driver.findElement(toastBy).getText();
 
 		WaitForInvisibility(toastBy, 10);

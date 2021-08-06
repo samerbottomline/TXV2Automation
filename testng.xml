@@ -2,10 +2,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Daily Treasury">
 
-	<test thread-count="1" name="Add Account">
+	<test thread-count="1" name="Account" preserve-order="true">
 
 		<parameter name="Account Type" value="Term Account" />
- 		<parameter name="Account ID" value="Account id" /> 
+		<parameter name="Account ID" value="AutoAcc_" />
 		<parameter name="Bank Number" value="Bank number" />
 		<parameter name="Account Name" value="Account name" />
 		<parameter name="Currency" value="USD" />
@@ -20,9 +20,6 @@
 		<parameter name="Project Name" value="Project Star Nordic" />
 		<classes>
 			<class name="com.bottomline.tests.AccountCRUD">
-				<methods>
-					<include name="Edit" />
-				</methods>
 			</class>
 
 		</classes>

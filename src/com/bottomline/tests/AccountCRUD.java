@@ -4,56 +4,45 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.bottomline.common.Functions;
 import com.bottomline.common.Fundamental;
-import com.bottomline.common.Randoms;
 import com.bottomline.pages.Account;
-import com.bottomline.pages.Login;
 
 //Basic operations for account module, ADD EDIT DELETE
 public class AccountCRUD extends Fundamental {
 
-	
+	Account account;
 
 	@Parameters({ "Account Type", "Account ID", "Bank Number", "Account Name", "Currency", "Account Number", "IBAN",
 			"Status", "Bank ID", "Company ID", "Account Label Name", "Bank Branch Name", "Child Account ID",
 			"Project Name" })
-
-	@Test
+	@Test(priority = 1)
 	public void Add(String accountType, String accountID, String bankAccountNumber, String accountName, String currency,
 			String accountNumber, String iban, String status, String bankID, String companyID, String accountLabelName,
 			String bankBranchName, String childAccountID, String projectName) {
 
-		Login login = new Login(driver);
-		Account account = new Account(driver);
-		
-		String defaultUsername = Functions.GetProperty("DefaultUsername");
-		String defaultPassword = Functions.GetProperty("DefaultPassword");
-
-		login.login(defaultUsername, defaultPassword);
+		account = new Account(driver);
+		System.out.println("Navigating to accounts page");
 		account.Navigate();
+		System.out.println("adding account");
 		account.Add(accountType, accountID, bankAccountNumber, accountName, currency, accountNumber, iban, status,
 				bankID, companyID, accountLabelName, bankBranchName, childAccountID, projectName);
 
 		Assert.assertEquals(account.obj.Toast, "Successfully Added");
 	}
 
-	@Parameters({ "Account ID" })
-	@Test
-	public void Edit(String accountID) {
-		Login login = new Login(driver);
-		Account account = new Account(driver);
-		
-		String defaultUsername = Functions.GetProperty("DefaultUsername");
-		String defaultPassword = Functions.GetProperty("DefaultPassword");
-		login.login(defaultUsername, defaultPassword);
+	@Test(priority = 2)
+	public void Edit() {
+		System.out.println("Editing account " + account.obj.AccountID_Value);
 		account.Navigate();
-		account.Edit(accountID);
+		account.Edit(account.obj.AccountID_Value);
 		Assert.assertEquals(account.obj.Toast, "Successfully Updated");
 	}
 
-	@Test
-	public void Delete(String accountID) {
-
+	@Test(priority = 3)
+	public void Delete() {
+		System.out.println("Deleting account " + account.obj.AccountID_Value);
+		account.Navigate();
+		account.Delete(account.obj.AccountID_Value);
+		Assert.assertEquals(account.obj.Toast, "Successfully Deleted");
 	}
 }

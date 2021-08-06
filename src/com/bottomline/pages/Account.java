@@ -1,20 +1,18 @@
 package com.bottomline.pages;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-
 import com.bottomline.common.Base;
+import com.bottomline.common.Functions;
 import com.bottomline.common.Randoms;
 import com.bottomline.objects.AccountObject;
+import com.google.common.base.Function;
 
 public class Account extends Base {
 
 	public AccountObject obj = new AccountObject();
 	WebDriver driver;
-	static Logger log = LogManager.getLogger(Account.class);;
 
 	public Account(WebDriver driver) {
 		super(driver);
@@ -42,7 +40,8 @@ public class Account extends Base {
 		SelectFromPopupGrid("Account Type", "Account Type Name", accountType, timeout);
 
 		System.out.println("write account id");
-		Write(obj.AccountID, accountID, timeout);
+		obj.AccountID_Value = Write(obj.AccountID, accountID + Randoms.ID(), timeout);
+		System.out.println("new account id: " + obj.AccountID_Value);
 
 		System.out.println("write bank account number");
 		Write(obj.BankAccountNumber, bankAccountNumber, timeout);
@@ -103,16 +102,35 @@ public class Account extends Base {
 		if (!Search("Account Id", accountID, 5)) {
 			return obj;
 		}
-		
-		System.out.println("FOUND");
+
 		Click(obj.Edit, timeout);
 
 		Clear(obj.AccountID);
 		obj.AccountID_Value = Write(obj.AccountID, Randoms.ID(), 5);
-
+		System.out.println("new EDITED account id: " + obj.AccountID_Value);
 		Click(obj.Save, 3);
 		obj.Toast = GetToastMsg();
 
 		return obj;
+
 	}
+
+	public AccountObject Delete(String accountID) {
+
+		int timeout = 5;
+
+		if (!Search("Account Id", accountID, 5)) {
+			return obj;
+		}
+
+		Click(obj.Delete, timeout);
+
+		ConfirmDelete(true);
+
+		obj.Toast = GetToastMsg();
+
+		return obj;
+
+	}
+
 }
