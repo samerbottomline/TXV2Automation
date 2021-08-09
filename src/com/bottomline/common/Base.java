@@ -29,6 +29,25 @@ public class Base extends BaseObject {
 	}
 	// end region driver stuff
 
+	// region get
+	protected String GetText(By by) {
+		return by.findElement(driver).getText();
+	}
+
+	protected String GetText(WebElement element) {
+		return element.getText();
+	}
+
+	protected String GetValue(By by) {
+		return by.findElement(driver).getAttribute("value");
+	}
+
+	protected String GetValue(WebElement element) {
+		return element.getAttribute("value");
+	}
+
+	// end region get
+
 	// region wait
 
 	protected boolean WaitForLoad(int timeout) {
@@ -181,10 +200,10 @@ public class Base extends BaseObject {
 		}
 	}
 
-	protected String Write(WebElement element, String value, int timeout) {
+	protected Boolean Write(WebElement element, String value, int timeout) {
 		WaitForElement(element, timeout);
 		element.sendKeys(value);
-		return element.getText();
+		return true;
 	}
 
 	protected boolean Write(WebElement element, Keys key, int timeout) {
@@ -302,7 +321,7 @@ public class Base extends BaseObject {
 
 	protected String GetToastMsg() {
 
-		WaitForElement(toastBy, 10);
+		WaitForElement(toastBy, 20);
 		String message = driver.findElement(toastBy).getText();
 
 		WaitForInvisibility(toastBy, 10);

@@ -21,9 +21,7 @@ public class AccountCRUD extends Fundamental {
 			String bankBranchName, String childAccountID, String projectName) {
 
 		account = new Account(driver);
-		System.out.println("Navigating to accounts page");
 		account.Navigate();
-		System.out.println("adding account");
 		account.Add(accountType, accountID, bankAccountNumber, accountName, currency, accountNumber, iban, status,
 				bankID, companyID, accountLabelName, bankBranchName, childAccountID, projectName);
 

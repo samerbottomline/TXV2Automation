@@ -23,7 +23,7 @@ public class Login extends Base {
 	}
 
 	public void login(String username, String password) {
-		WaitForLoad(3);
+		//WaitForLoad(3);
 
 		if (AlreadySignedIn()) {
 			return;

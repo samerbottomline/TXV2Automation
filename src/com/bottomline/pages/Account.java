@@ -40,7 +40,8 @@ public class Account extends Base {
 		SelectFromPopupGrid("Account Type", "Account Type Name", accountType, timeout);
 
 		System.out.println("write account id");
-		obj.AccountID_Value = Write(obj.AccountID, accountID + Randoms.ID(), timeout);
+		Write(obj.AccountID, accountID + Randoms.ID(), timeout);
+		obj.AccountID_Value = GetValue(obj.AccountID);
 		System.out.println("new account id: " + obj.AccountID_Value);
 
 		System.out.println("write bank account number");
@@ -106,7 +107,8 @@ public class Account extends Base {
 		Click(obj.Edit, timeout);
 
 		Clear(obj.AccountID);
-		obj.AccountID_Value = Write(obj.AccountID, Randoms.ID(), 5);
+		Write(obj.AccountID, Randoms.ID(), 5);
+		obj.AccountID_Value = GetText(obj.AccountID);
 		System.out.println("new EDITED account id: " + obj.AccountID_Value);
 		Click(obj.Save, 3);
 		obj.Toast = GetToastMsg();
