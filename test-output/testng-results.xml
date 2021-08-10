@@ -2,39 +2,49 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-08-10T11:46:25 EEST" name="Administration" finished-at="2021-08-10T11:47:23 EEST" duration-ms="58136">
+  <suite started-at="2021-08-10T17:27:10 EEST" name="Administration" finished-at="2021-08-10T17:28:24 EEST" duration-ms="74105">
     <groups>
     </groups>
-    <test started-at="2021-08-10T11:46:25 EEST" name="Account" finished-at="2021-08-10T11:47:23 EEST" duration-ms="58136">
-      <class name="com.bottomline.tests.AccountGroupLabelsCRUD">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.bottomline.tests.AccountGroupLabelsCRUD@402bba4f]" started-at="2021-08-10T11:46:25 EEST" name="beforeClass" finished-at="2021-08-10T11:46:38 EEST" duration-ms="12350" status="PASS">
+    <test started-at="2021-08-10T17:27:10 EEST" name="Account Labels" finished-at="2021-08-10T17:28:24 EEST" duration-ms="74105">
+      <class name="com.bottomline.tests.AccountLabelsCRUD">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.bottomline.tests.AccountLabelsCRUD@402bba4f]" started-at="2021-08-10T17:27:10 EEST" name="beforeClass" finished-at="2021-08-10T17:27:23 EEST" duration-ms="12818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Add(java.lang.String)[pri:1, instance:com.bottomline.tests.AccountGroupLabelsCRUD@402bba4f]" started-at="2021-08-10T11:46:38 EEST" name="Add" finished-at="2021-08-10T11:46:56 EEST" duration-ms="18359" status="PASS">
+        <test-method signature="Add(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:com.bottomline.tests.AccountLabelsCRUD@402bba4f]" started-at="2021-08-10T17:27:23 EEST" name="Add" finished-at="2021-08-10T17:27:51 EEST" duration-ms="28467" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[AGL_]]>
+                <![CDATA[AL_]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[No Interest]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Add -->
-        <test-method signature="Edit()[pri:2, instance:com.bottomline.tests.AccountGroupLabelsCRUD@402bba4f]" started-at="2021-08-10T11:46:56 EEST" name="Edit" finished-at="2021-08-10T11:47:09 EEST" duration-ms="13099" status="PASS">
+        <test-method signature="Edit()[pri:2, instance:com.bottomline.tests.AccountLabelsCRUD@402bba4f]" started-at="2021-08-10T17:27:51 EEST" name="Edit" finished-at="2021-08-10T17:28:10 EEST" duration-ms="18532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Edit -->
-        <test-method signature="Delete()[pri:3, instance:com.bottomline.tests.AccountGroupLabelsCRUD@402bba4f]" started-at="2021-08-10T11:47:09 EEST" name="Delete" finished-at="2021-08-10T11:47:23 EEST" duration-ms="13911" status="PASS">
+        <test-method signature="Delete()[pri:3, instance:com.bottomline.tests.AccountLabelsCRUD@402bba4f]" started-at="2021-08-10T17:28:10 EEST" name="Delete" finished-at="2021-08-10T17:28:24 EEST" duration-ms="13929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Delete -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.bottomline.tests.AccountGroupLabelsCRUD@402bba4f]" started-at="2021-08-10T11:47:23 EEST" name="afterClass" finished-at="2021-08-10T11:47:23 EEST" duration-ms="353" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.bottomline.tests.AccountLabelsCRUD@402bba4f]" started-at="2021-08-10T17:28:24 EEST" name="afterClass" finished-at="2021-08-10T17:28:24 EEST" duration-ms="289" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.bottomline.tests.AccountGroupLabelsCRUD -->
-    </test> <!-- Account -->
+      </class> <!-- com.bottomline.tests.AccountLabelsCRUD -->
+    </test> <!-- Account Labels -->
   </suite> <!-- Administration -->
 </testng-results>

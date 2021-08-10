@@ -21,7 +21,7 @@ public class AccountGroups extends Base {
 	}
 
 	public void Navigate() {
-		System.out.println("Navigating to accounts page");
+		System.out.println("Navigating to account groups page");
 		Administration admin = new Administration(driver);
 		admin.Navigate("Account Groups");
 	}

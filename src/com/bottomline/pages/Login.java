@@ -25,9 +25,9 @@ public class Login extends Base {
 	public void login(String username, String password) {
 		//WaitForLoad(3);
 
-		if (AlreadySignedIn()) {
-			return;
-		}
+//		if (AlreadySignedIn()) {
+//			return;
+//		}
 
 		// report.Info("writing username: " + username);
 		Write(obj.username, username, 10);

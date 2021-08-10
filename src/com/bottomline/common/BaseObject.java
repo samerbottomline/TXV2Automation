@@ -14,6 +14,8 @@ public class BaseObject {
 	By columns = By.xpath("//div[@class='card']//thead/tr[1]/th");
 	By yes = By.xpath("//div[@class='mdc-dialog mdc-dialog--open']//button[text()='Yes']");
 	By no = By.xpath("//div[@class='mdc-dialog mdc-dialog--open']//button[text()='No']");
+	By validationErrors = By.xpath("//ul[@class='validation-errors']");
+	By validationMessages = By.xpath("//li[@class='validation-message']");
 
 	// here we search inside dialogs(dialog found by dialog title) for the search
 	// bar element

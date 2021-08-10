@@ -46,6 +46,21 @@ public class Base extends BaseObject {
 		return element.getAttribute("value");
 	}
 
+	protected List<String> GetValidationMessages() {
+		boolean validationBoxExist = CheckElementExist(validationErrors);
+
+		List<String> requiredFields = null;
+
+		if (validationBoxExist) {
+			List<WebElement> validationMsgs = driver.findElements(validationMessages);
+			for (int j = 0; j < validationMsgs.size(); j++) {
+				requiredFields.add(j,validationMsgs.get(j).getText());
+			}
+			return requiredFields;
+		} else {
+			return null;
+		}
+	}
 	// end region get
 
 	// region wait

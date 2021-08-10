@@ -4,10 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import com.bottomline.common.Base;
-import com.bottomline.common.Functions;
 import com.bottomline.common.Randoms;
 import com.bottomline.objects.AccountObject;
-import com.google.common.base.Function;
 
 public class Account extends Base {
 
