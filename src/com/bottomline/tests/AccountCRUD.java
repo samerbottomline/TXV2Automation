@@ -31,7 +31,6 @@ public class AccountCRUD extends Fundamental {
 	@Test(priority = 2)
 	public void Edit() {
 		System.out.println("Editing account " + account.obj.AccountID_Value);
-		account.Navigate();
 		account.Edit(account.obj.AccountID_Value);
 		Assert.assertEquals(account.obj.Toast, "Successfully Updated");
 	}
@@ -39,7 +38,6 @@ public class AccountCRUD extends Fundamental {
 	@Test(priority = 3)
 	public void Delete() {
 		System.out.println("Deleting account " + account.obj.AccountID_Value);
-		account.Navigate();
 		account.Delete(account.obj.AccountID_Value);
 		Assert.assertEquals(account.obj.Toast, "Successfully Deleted");
 	}

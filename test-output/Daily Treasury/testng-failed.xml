@@ -19,7 +19,7 @@
     <classes>
       <class name="com.bottomline.tests.AccountCRUD">
         <methods>
-          <include name="Add"/>
+          <include name="Add" invocation-numbers="0"/>
           <include name="Delete"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>

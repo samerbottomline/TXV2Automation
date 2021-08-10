@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Daily Treasury">
+<suite name="Administration">
 
 	<test thread-count="1" name="Account" preserve-order="true">
-
 		<parameter name="Account Type" value="Term Account" />
 		<parameter name="Account ID" value="AutoAcc_" />
 		<parameter name="Bank Number" value="Bank number" />
@@ -18,11 +17,16 @@
 		<parameter name="Bank Branch Name" value="Manchester Branch" />
 		<parameter name="Child Account ID" value="Austria GmbH 123" />
 		<parameter name="Project Name" value="Project Star Nordic" />
+		
+		<parameter name="Account Group Name" value="AGN_" />
+		
+		<parameter name="Account Group Label" value="AGL_" />
 		<classes>
-			<class name="com.bottomline.tests.AccountCRUD">
-			</class>
-
+<!-- 			<class name="com.bottomline.tests.AccountCRUD"></class> -->
+<!-- 			<class name="com.bottomline.tests.AccountGroupsCRUD"></class> -->
+			<class name="com.bottomline.tests.AccountGroupLabelsCRUD"></class>
 		</classes>
 	</test>
+
 
 </suite>

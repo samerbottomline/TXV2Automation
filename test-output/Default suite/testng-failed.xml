@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.bottomline.tests.AccountCRUD">
+      <class name="com.bottomline.tests.AccountGroupsCRUD">
         <methods>
-          <include name="Add"/>
+          <include name="Edit"/>
           <include name="afterClass"/>
           <include name="beforeClass"/>
+          <include name="Add"/>
+          <include name="Delete"/>
         </methods>
-      </class> <!-- com.bottomline.tests.AccountCRUD -->
+      </class> <!-- com.bottomline.tests.AccountGroupsCRUD -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

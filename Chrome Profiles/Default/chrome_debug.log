@@ -1,18 +1,50 @@
-[18668:17952:0806/112606.957:ERROR:model_type_store_service_impl.cc(39)] Failed to initialize ModelTypeStore backend: Init@components/sync/model/model_type_store_backend.cc:90: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\Sync Data\LevelDB/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[18668:20748:0806/112607.229:WARNING:value_store_frontend.cc(45)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[18668:20748:0806/112607.237:WARNING:value_store_frontend.cc(45)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[18668:1704:0806/112610.870:INFO:CONSOLE(1)] "mono_wasm_runtime_ready fe00e07a-5519-4dfe-b35a-f867dbaf2e28", source: https://qa-automation2.treasuryxpress.com/_framework/dotnet.5.0.4.js (1)
-[18668:1704:0806/112612.884:INFO:CONSOLE(0)] "Access to XMLHttpRequest at 'https://qa-automation-auth.treasuryxpress.com/.well-known/openid-configuration' from origin 'https://qa-automation2.treasuryxpress.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://qa-automation2.treasuryxpress.com/authentication/login?returnUrl=https%3A%2F%2Fqa-automation2.treasuryxpress.com%2F (0)
-[18668:1704:0806/112613.032:INFO:CONSOLE(0)] "Access to XMLHttpRequest at 'https://qa-automation-auth.treasuryxpress.com/.well-known/openid-configuration' from origin 'https://qa-automation2.treasuryxpress.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://qa-automation2.treasuryxpress.com/authentication/login?returnUrl=https%3A%2F%2Fqa-automation2.treasuryxpress.com%2F (0)
-[18668:1704:0806/112613.107:INFO:CONSOLE(0)] "Access to XMLHttpRequest at 'https://qa-automation-auth.treasuryxpress.com/.well-known/openid-configuration' from origin 'https://qa-automation2.treasuryxpress.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.", source: https://qa-automation2.treasuryxpress.com/authentication/login?returnUrl=https%3A%2F%2Fqa-automation2.treasuryxpress.com%2F (0)
-[18668:1704:0806/112614.890:ERROR:device_event_log_impl.cc(214)] [11:26:14.889] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
-[18668:1704:0806/112614.891:ERROR:device_event_log_impl.cc(214)] [11:26:14.890] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
-[18668:1704:0806/112614.892:ERROR:device_event_log_impl.cc(214)] [11:26:14.892] USB: usb_service_win.cc:389 Could not read device interface GUIDs: The system cannot find the file specified. (0x2)
-[18668:1704:0806/112614.896:ERROR:device_event_log_impl.cc(214)] [11:26:14.896] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
-[18668:1704:0806/112614.897:ERROR:device_event_log_impl.cc(214)] [11:26:14.897] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
-[18668:12260:0806/112614.902:ERROR:data_store_impl.cc(131)] Failed to open Data Reduction Proxy DB: 3
-[18668:4880:0806/112615.166:WARNING:leveldb_database.cc(105)] Unable to open C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[18668:4880:0806/112615.174:WARNING:leveldb_database.cc(105)] Unable to open C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[18668:4880:0806/112615.182:WARNING:leveldb_database.cc(105)] Unable to open C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[18668:4880:0806/112615.189:WARNING:leveldb_database.cc(105)] Unable to open C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
-[18668:1704:0806/112707.088:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[20328:10936:0810/114627.175:ERROR:model_type_store_service_impl.cc(39)] Failed to initialize ModelTypeStore backend: Init@components/sync/model/model_type_store_backend.cc:90: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\Sync Data\LevelDB/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[20328:10936:0810/114627.486:WARNING:value_store_frontend.cc(45)] Reading ahfgeienlihckogmohjhadlkjgocpleb.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[20328:10936:0810/114627.495:WARNING:value_store_frontend.cc(45)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[20328:19476:0810/114631.392:INFO:CONSOLE(1)] "mono_wasm_runtime_ready fe00e07a-5519-4dfe-b35a-f867dbaf2e28", source: https://qa-automation2.treasuryxpress.com/_framework/dotnet.5.0.4.js (1)
+[20328:19476:0810/114637.961:INFO:CONSOLE(17)] "[object Object]", source: https://qa-automation2.treasuryxpress.com/js/app.js (17)
+[20328:19476:0810/114638.024:INFO:CONSOLE(1)] "crit: Microsoft.AspNetCore.Components.WebAssembly.Rendering.WebAssemblyRenderer[100]
+      Unhandled exception rendering component: Could not find 'dashboard.saveDashboardRef' ('saveDashboardRef' was undefined).
+      Error: Could not find 'dashboard.saveDashboardRef' ('saveDashboardRef' was undefined).
+          at https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:1287
+          at Array.forEach (<anonymous>)
+          at e.findFunction (https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:1247)
+          at b (https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:2989)
+          at https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:3935
+          at new Promise (<anonymous>)
+          at Object.beginInvokeJSFromDotNet (https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:3908)
+          at Object.w [as invokeJSFromDotNet] (https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:64218)
+          at _mono_wasm_invoke_js_blazor (https://qa-automation2.treasuryxpress.com/_framework/dotnet.5.0.4.js:1:190800)
+          at do_icall (<anonymous>:wasm-function[10596]:0x194e4e)
+Microsoft.JSInterop.JSException: Could not find 'dashboard.saveDashboardRef' ('saveDashboardRef' was undefined).
+Error: Could not find 'dashboard.saveDashboardRef' ('saveDashboardRef' was undefined).
+    at https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:1287
+    at Array.forEach (<anonymous>)
+    at e.findFunction (https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:1247)
+    at b (https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:2989)
+    at https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:3935
+    at new Promise (<anonymous>)
+    at Object.beginInvokeJSFromDotNet (https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:3908)
+    at Object.w [as invokeJSFromDotNet] (https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js:1:64218)
+    at _mono_wasm_invoke_js_blazor (https://qa-automation2.treasuryxpress.com/_framework/dotnet.5.0.4.js:1:190800)
+    at do_icall (<anonymous>:wasm-function[10596]:0x194e4e)
+   at Microsoft.JSInterop.JSRuntime.<InvokeAsync>d__15`1[[System.Object, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]].MoveNext()
+   at Microsoft.JSInterop.JSRuntimeExtensions.InvokeVoidAsync(IJSRuntime jsRuntime, String identifier, Object[] args)
+   at TX.Web.Client.Pages.Dashboard.Dashboard.OnAfterRenderAsync(Boolean firstRender)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle)", source: https://qa-automation2.treasuryxpress.com/_framework/blazor.webassembly.js (1)
+[20328:19476:0810/114641.071:ERROR:device_event_log_impl.cc(214)] [11:46:41.071] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[20328:19476:0810/114641.072:ERROR:device_event_log_impl.cc(214)] [11:46:41.072] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[20328:19476:0810/114641.073:ERROR:device_event_log_impl.cc(214)] [11:46:41.073] USB: usb_service_win.cc:389 Could not read device interface GUIDs: The system cannot find the file specified. (0x2)
+[20328:19476:0810/114641.076:ERROR:device_event_log_impl.cc(214)] [11:46:41.077] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[20328:19476:0810/114641.077:ERROR:device_event_log_impl.cc(214)] [11:46:41.077] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[20328:19476:0810/114641.078:ERROR:device_event_log_impl.cc(214)] [11:46:41.078] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+[20328:12516:0810/114641.081:ERROR:data_store_impl.cc(131)] Failed to open Data Reduction Proxy DB: 3
+[20328:24912:0810/114641.292:WARNING:leveldb_database.cc(105)] Unable to open C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[20328:24912:0810/114641.298:WARNING:leveldb_database.cc(105)] Unable to open C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[20328:24912:0810/114641.306:WARNING:leveldb_database.cc(105)] Unable to open C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[20328:24912:0810/114641.314:WARNING:leveldb_database.cc(105)] Unable to open C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata: IO error: C:\Users\fouad.rached\Documents\eclipse-workspace\TXGO\Chrome Profiles\Default\Default\shared_proto_db\metadata/MANIFEST-000001: Unable to create sequential file (ChromeMethodBFE: 7::NewSequentialFile::1)
+[20328:19476:0810/114713.564:INFO:CONSOLE(1)] "matdialog-log-setIsOpen true", source: https://qa-automation2.treasuryxpress.com/_content/MatBlazor/dist/matBlazor.js (1)
+[20328:19476:0810/114714.343:INFO:CONSOLE(1)] "matdialog-log-setCanBeClosed false", source: https://qa-automation2.treasuryxpress.com/_content/MatBlazor/dist/matBlazor.js (1)
+[20328:19476:0810/114715.002:INFO:CONSOLE(1)] "matdialog-log-setCanBeClosed true", source: https://qa-automation2.treasuryxpress.com/_content/MatBlazor/dist/matBlazor.js (1)
+[20328:19476:0810/114715.035:INFO:CONSOLE(1)] "matdialog-log-setIsOpen false", source: https://qa-automation2.treasuryxpress.com/_content/MatBlazor/dist/matBlazor.js (1)
+[20328:19476:0810/114723.809:WARNING:pref_notifier_impl.cc(40)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
